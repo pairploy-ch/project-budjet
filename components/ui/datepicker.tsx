@@ -32,7 +32,10 @@ function isValidDate(date: Date | undefined) {
   return !isNaN(date.getTime())
 }
 
-export function Calendar28() {
+type DateProps = {
+  title: string
+}
+export default function datepicker({title}:DateProps) {
   const [open, setOpen] = React.useState(false)
   const [date, setDate] = React.useState<Date | undefined>(
     new Date("2025-06-01")
@@ -43,7 +46,7 @@ export function Calendar28() {
   return (
     <div className="flex flex-col gap-3">
       <Label htmlFor="date" className="px-1">
-        Subscription Date
+        {title}
       </Label>
       <div className="relative flex gap-2">
         <Input
@@ -74,7 +77,7 @@ export function Calendar28() {
               className="absolute top-1/2 right-2 size-6 -translate-y-1/2"
             >
               <CalendarIcon className="size-3.5" />
-              <span className="sr-only">Select date</span>
+              <span className="sr-only">Select Date</span>
             </Button>
           </PopoverTrigger>
           <PopoverContent
