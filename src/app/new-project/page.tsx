@@ -546,7 +546,7 @@ export default function ProjectBudgetForm() {
                   Project Objectives & KPIs
                 </h2>
                 <Button
-                  className="bg-blue-600 hover:bg-blue-700"
+                  className="bg-black"
                   size="sm"
                   onClick={addObjective}
                 >
@@ -603,7 +603,7 @@ export default function ProjectBudgetForm() {
                         <Button
                           variant="outline"
                           size="sm"
-                          className="border-green-500 text-green-600 hover:bg-green-50"
+                          className="bg-black text-white"
                           onClick={addKPI}
                         >
                           <Plus className="h-4 w-4 mr-2" />
@@ -784,7 +784,7 @@ export default function ProjectBudgetForm() {
                   Budget Details
                 </h2>
                 <Button
-                  className="bg-blue-600 hover:bg-blue-700"
+                  className="bg-black"
                   size="sm"
                   onClick={addBudgetLineItem}
                 >
@@ -813,7 +813,7 @@ export default function ProjectBudgetForm() {
                 </div>
 
                 {/* Table Rows */}
-                <div className="border-2 border-blue-200 rounded-lg bg-blue-50/30">
+                <div className="border-2 border-grey-200 rounded-lg ">
                   {budgetLineItems.map((item, index) => (
                     <div
                       key={item.id}
@@ -964,7 +964,7 @@ export default function ProjectBudgetForm() {
                 {/* Progress Bar */}
                 <div className="mt-6">
                   <div className="flex justify-between text-sm text-gray-600 mb-2">
-                    <span>Budget Allocation</span>
+                    {/* <span>Budget Allocation</span> */}
                     <span>
                       {formData.totalBudget
                         ? Math.round(
@@ -993,12 +993,12 @@ export default function ProjectBudgetForm() {
                       }}
                     ></div>
                   </div>
-                  {calculateRemaining() < 0 && (
+                  {/* {calculateRemaining() < 0 && (
                     <div className="text-red-600 text-sm mt-2">
                       ⚠️ Budget exceeded by ฿
                       {Math.abs(calculateRemaining()).toLocaleString()}
                     </div>
-                  )}
+                  )} */}
                 </div>
               </div>
             </CardContent>
@@ -1352,7 +1352,7 @@ export default function ProjectBudgetForm() {
           </div>
 
           <Button
-            className="px-6 bg-blue-600 hover:bg-blue-700"
+            className="px-6 bg-black"
             onClick={nextStep}
             disabled={currentStep === 4}
           >

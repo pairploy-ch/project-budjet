@@ -1,9 +1,9 @@
 // import Image from "next/image";
-import SubHeader from "../../components/SubHeader";
-import DatePicker from "../../components/ui/datepicker";
-import StatCard from "../../components/StatCard";
+import SubHeader from "@/components/SubHeader";
+import DatePicker from "@/components/ui/datepicker";
+import StatCard from "@/components/StatCard";
 
-import TableData from "../../components/TableData";
+import TableData from "@/components/TableData";
 
 export default function Home() {
   return (
